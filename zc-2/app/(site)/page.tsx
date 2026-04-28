@@ -202,13 +202,13 @@ export default async function HomePage() {
                             <Link
                               key={fidx}
                               href="/products"
-                              className="flex h-12 items-center gap-2.5 rounded-full px-2.5 text-base font-medium text-[#3E4757] transition-all duration-200 hover:bg-[#3D7BF2] hover:text-white"
+                              className="group/feature flex h-12 items-center gap-2.5 rounded-full px-2.5 text-base font-medium text-[#3E4757] transition-all duration-200 hover:bg-[#3D7BF2] hover:text-white"
                             >
                               {icon && (
                                 <img
                                   src={icon}
                                   alt=""
-                                  className="h-4 w-4 flex-shrink-0"
+                                  className="h-4 w-4 flex-shrink-0 brightness-50 transition-all duration-200 group-hover/feature:brightness-100"
                                 />
                               )}
                               <span className="whitespace-nowrap">
