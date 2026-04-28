@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(curl -s http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"claude\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"claude\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -d '{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/list\"}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"claude\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -d '{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/list\",\"params\":{}}')",
+      "Bash(curl -s -i -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"claude\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/list\",\"params\":{}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\"params\":{\"name\":\"design_to_code\",\"arguments\":{\"itemId\":\"0:1\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":4,\"method\":\"tools/call\",\"params\":{\"name\":\"get_node_dsl\",\"arguments\":{\"itemId\":\"0:1\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":5,\"method\":\"tools/call\",\"params\":{\"name\":\"get_local_styles\",\"arguments\":{}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":6,\"method\":\"tools/call\",\"params\":{\"name\":\"get_all_components\",\"arguments\":{}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":8,\"method\":\"tools/call\",\"params\":{\"name\":\"get_export_image\",\"arguments\":{\"itemId\":\"0:1\",\"exportSettings\":{\"imageType\":1,\"contentOnly\":true}}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":9,\"method\":\"tools/call\",\"params\":{\"name\":\"design_to_code\",\"arguments\":{\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":10,\"method\":\"tools/call\",\"params\":{\"name\":\"get_variable_sets\",\"arguments\":{}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: f7a7bac7-af79-4837-ac84-c02b25735d28\" -d '{\"jsonrpc\":\"2.0\",\"id\":11,\"method\":\"tools/call\",\"params\":{\"name\":\"get_remote_styles\",\"arguments\":{}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\"params\":{\"name\":\"design_to_code\",\"arguments\":{\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\"params\":{\"name\":\"get_node_dsl\",\"arguments\":{\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":4,\"method\":\"tools/call\",\"params\":{\"name\":\"get_node_dsl\",\"arguments\":{\"itemId\":\"1:2\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":5,\"method\":\"tools/call\",\"params\":{\"name\":\"get_node_dsl\",\"arguments\":{\"itemId\":\"1:36\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":6,\"method\":\"tools/call\",\"params\":{\"name\":\"get_node_dsl\",\"arguments\":{\"itemId\":\"1:3\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"tools/call\",\"params\":{\"name\":\"design_to_code\",\"arguments\":{\"itemId\":\"https://pixso.cn/app/design/sejVQyRpr-VpdXdC7-e-8A?page-id=0:1&editMode=coder\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":8,\"method\":\"tools/call\",\"params\":{\"name\":\"get_image\",\"arguments\":{\"itemId\":\"https://pixso.cn/app/design/sejVQyRpr-VpdXdC7-e-8A?page-id=0:1&editMode=coder\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(curl -s -N http://127.0.0.1:3667/mcp -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -H \"mcp-session-id: 64a04e67-a249-475e-a96f-8312256b6a64\" -d '{\"jsonrpc\":\"2.0\",\"id\":9,\"method\":\"tools/call\",\"params\":{\"name\":\"get_node_dsl\",\"arguments\":{\"itemId\":\"0:1\",\"clientFrameworks\":\"react\"}}}')",
+      "Bash(grep -oE \"rgba?\\\\\\([^\\)]+\\\\\\)|#[0-9a-fA-F]{3,8}\" \"E:/VSvibecoding/首页代码包/react-Untitled/react/src/styles/Frame146.css\")",
+      "Bash(tasklist)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(taskkill /F /PID 4840)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(powershell -Command \"Stop-Process -Id 4840 -Force\")",
+      "Bash(curl -s http://localhost:3000/api/solutions)",
+      "Bash(curl -s http://localhost:3000/api/partners)"
+    ],
+    "deny": [
+      "Bash:rm*",
+      "Bash:sudo*"
+    ],
+    "additionalDirectories": [
+      "E:\\VSvibecoding\\首页代码包\\react-Untitled\\react\\src\\assets\\fonts",
+      "e:\\VSvibecoding\\zc-2\\node_modules\\.prisma\\client",
+      "E:\\VSvibecoding\\首页代码包\\react-Untitled\\react\\src\\assets\\images"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/14640/.claude/**)",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://pixso.cn/app/design/sejVQyRpr-VpdXdC7-e-8A?page-id=0:1\")",
+      "Bash(curl -s \"https://api.pixso.cn/api/v1/files/sejVQyRpr-VpdXdC7-e-8A\")",
+      "Bash(curl -s \"https://api.pixso.cn/api/file/info?file_key=sejVQyRpr-VpdXdC7-e-8A\")",
+      "Read(//c/Users/14640/**)",
+      "Read(//c/Users/14640/.vscode/**)",
+      "Bash(curl -s -X POST http://127.0.0.1:3667/mcp -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}')",
+      "Bash(curl -s -X POST http://127.0.0.1:3667/mcp -H \"Content-Type: application/json\" -H \"Mcp-Session-Id: test-session-123\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"claude\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s -X POST http://127.0.0.1:3667/mcp -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"claude\",\"version\":\"1.0\"}}}' -v)",
+      "Bash(grep -oP '.{0,100}时空数据智能处理软件.{0,100}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(npx next *)",
+      "Bash(git reset *)"
+    ]
+  }
+}
