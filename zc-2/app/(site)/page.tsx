@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import HeroParticles from "@/components/site/HeroParticles";
 
 // 产品样式硬编码（按顺序索引匹配）——图标、颜色、背景固定
 const productStyles = [
@@ -107,29 +108,67 @@ export default async function HomePage() {
     <div className="flex flex-col">
       {/* Hero Banner */}
       <section className="relative flex min-h-[500px] items-center justify-center overflow-hidden bg-[#121212] md:min-h-[576px]">
-        <div className="absolute inset-0">
+        {/* Earth background with pulse glow */}
+        <div className="hero-earth-anim absolute inset-0">
+          <div
+            className="absolute inset-0 animate-pulse-glow"
+            style={{
+              background:
+                "radial-gradient(circle at 70% 50%, rgba(29, 96, 254, 0.35) 0%, transparent 55%)",
+            }}
+          />
           <img
             src="/images/c9c781747063d6d5e7556dbadba96d8fa372d62f.png"
             alt=""
             className="h-full w-full object-cover"
           />
+          {/* Gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/25 to-transparent" />
+          {/* Horizon glow line */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-px"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent 0%, rgba(61, 123, 242, 0.4) 50%, transparent 100%)",
+            }}
+          />
         </div>
+
+        {/* HUD grid overlay */}
+        <div className="hero-particles-anim pointer-events-none absolute inset-0 z-[4] hero-hud-grid opacity-60" />
+
+        <div className="hero-particles-anim absolute inset-0 z-[5]">
+          <HeroParticles />
+        </div>
+
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-28 text-center md:px-6 md:py-36">
           <h1
-            className="text-3xl font-bold leading-tight tracking-widest text-white md:text-5xl lg:text-[56px]"
-            style={{ fontFamily: "OPPOSans, sans-serif", letterSpacing: "0.1em" }}
+            className="hero-title-gradient hero-title-anim text-3xl font-bold leading-tight tracking-widest md:text-5xl lg:text-[56px]"
+            style={{
+              fontFamily: "OPPOSans, sans-serif",
+              letterSpacing: "0.1em",
+              textShadow: "0 0 60px rgba(29, 96, 254, 0.3)",
+            }}
           >
             时空智能技术·创新用户价值
           </h1>
           <p
-            className="text-base text-white/85 md:text-lg lg:text-[22px]"
-            style={{ fontFamily: "OPPOSans, sans-serif", letterSpacing: "0.1em" }}
+            className="hero-subtitle-anim text-base text-white/85 md:text-lg lg:text-[22px]"
+            style={{
+              fontFamily: "OPPOSans, sans-serif",
+              letterSpacing: "0.1em",
+              textShadow: "0 0 20px rgba(0, 0, 0, 0.6)",
+            }}
           >
             做用户最值得信赖的时空智能产品与技术服务商
           </p>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 bg-[#3D7BF2] px-6 py-2 text-sm text-white transition-colors hover:bg-[#3570E0]"
+            className="hero-btn-anim inline-flex items-center gap-2 rounded bg-[#3D7BF2] px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#3570E0]"
+            style={{
+              boxShadow:
+                "0 0 20px rgba(61, 123, 242, 0.5), 0 4px 15px rgba(0, 0, 0, 0.3)",
+            }}
           >
             了解更多
             <img src="/images/Frame16.png" alt="" className="h-4 w-4" />
