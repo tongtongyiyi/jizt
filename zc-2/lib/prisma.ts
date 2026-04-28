@@ -13,6 +13,7 @@ if (globalForPrisma.prisma) {
     throw new Error('DATABASE_URL is not defined')
   }
   const adapter = new PrismaNeon({ connectionString })
+  // @ts-expect-error Prisma 5 generated types lack the adapter option, but runtime supports it
   prisma = new PrismaClient({ adapter })
 }
 
