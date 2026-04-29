@@ -45,6 +45,8 @@ const productStyles = [
   },
 ];
 
+export const dynamic = "force-dynamic";
+
 const defaultStyle = {
   topImage: "",
   lineImage: "",
