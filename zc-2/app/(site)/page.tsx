@@ -109,7 +109,10 @@ export default async function HomePage() {
       {/* Hero Banner */}
       <section className="relative flex min-h-[500px] items-center justify-center overflow-hidden bg-[#121212] md:min-h-[576px]">
         {/* Earth background with pulse glow */}
-        <div className="hero-earth-anim absolute inset-0">
+        <div
+          className="hero-earth-anim absolute inset-0"
+          style={{ opacity: 0, transform: 'scale(1.15)', filter: 'blur(10px)' }}
+        >
           <div
             className="absolute inset-0 animate-pulse-glow"
             style={{
