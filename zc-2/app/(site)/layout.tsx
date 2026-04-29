@@ -1,5 +1,6 @@
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
+import FloatingActions from "@/components/site/FloatingActions";
 
 export default function SiteLayout({
   children,
@@ -11,6 +12,7 @@ export default function SiteLayout({
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      <FloatingActions />
     </>
   );
 }
