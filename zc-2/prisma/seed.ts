@@ -27,13 +27,13 @@ async function main() {
   const products = [
     {
       title: '时空基础产品',
-      description: '快速构建时空数字底座，赋能从数据到决策的完整链路',
+      description: '基于全源兼容、AI驱动、信创适配的核心能力',
       features: JSON.stringify(['时空数据智能处理软件', '时空数据服务发布管理软件', '时空智能三维网络端软件']),
       sortOrder: 1,
     },
     {
       title: '时空数据智能中台',
-      description: '围绕数据"汇、治、管、供"全生命周期，深度融合大数据、AI与时空智能技术，提供从多源异构数据接入、自动化治理、资产化管理到智能化服务与应用构建的完整能力',
+      description: '面向政府、央国企及行业客户打造的一站式时空数据能力底座',
       features: JSON.stringify(['时空数据汇集系统', '时空数据治理系统', '时空数据管理系统', '时空数据应用系统', '安全管理系统', '权限管理系统']),
       sortOrder: 2,
     },
