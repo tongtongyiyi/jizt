@@ -18,18 +18,20 @@ export default function FloatingActions() {
   };
 
   return (
-    <div className="fixed right-4 top-1/2 z-50 flex -translate-y-1/2 flex-col items-center gap-3 md:right-6">
+    <div className="fixed right-4 top-1/2 z-50 flex w-9 -translate-y-1/2 flex-col items-center gap-[9px] md:right-8"
+         style={{ fontFamily: "OPPOSans, sans-serif" }}>
       {/* 售前 */}
       <button
-        className="flex flex-col items-center gap-1 transition-transform hover:scale-110"
+        className="relative flex flex-col items-center transition-transform hover:scale-110"
         title="售前咨询"
       >
         <img
           src="/images/c9ad51b9800c322e32de14972e65cef9d5f54cff.png"
           alt="售前"
-          className="h-12 w-auto"
+          className="h-16 w-[53px]"
         />
-        <span className="rounded-full bg-white px-2 py-0.5 text-[10px] text-[#333] shadow-sm">
+        <span className="absolute -bottom-1 flex h-5 w-10 items-center justify-center rounded-[20px] bg-white text-xs text-black shadow-sm"
+              style={{ fontFamily: "OPPOSans, sans-serif" }}>
           售前
         </span>
       </button>
@@ -51,14 +53,14 @@ export default function FloatingActions() {
         <img
           src="/images/logowechatstrokefilled.png"
           alt="微信"
-          className="h-4 w-4"
+          className="h-4 w-[16.5px]"
         />
       </button>
 
       {/* 回到顶部 */}
       <button
         onClick={scrollToTop}
-        className={`flex h-9 w-9 items-center justify-center rounded-full bg-[#3D7BF2] shadow-lg transition-all hover:scale-110 ${
+        className={`relative flex h-9 w-9 items-center justify-center rounded-full bg-[#3D7BF2] shadow-lg transition-all hover:scale-110 ${
           visible
             ? "opacity-100 translate-y-0"
             : "pointer-events-none opacity-0 translate-y-2"
@@ -66,7 +68,11 @@ export default function FloatingActions() {
         title="回到顶部"
         aria-label="回到顶部"
       >
-        <img src="/images/Frame.png" alt="回到顶部" className="h-4 w-4" />
+        <img
+          src="/images/Frame.png"
+          alt="回到顶部"
+          className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2"
+        />
       </button>
     </div>
   );
