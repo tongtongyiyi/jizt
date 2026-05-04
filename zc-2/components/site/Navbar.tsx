@@ -30,7 +30,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-12 md:flex">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (

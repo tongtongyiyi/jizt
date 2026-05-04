@@ -51,18 +51,21 @@ export default async function ProductsPage() {
                 product center
               </p>
             </div>
-            <p
-              className="max-w-[660px] text-sm leading-relaxed text-black/85 md:text-base md:leading-[1.6]"
+            <div
+              className="max-w-[880px] text-sm leading-[26px] text-black/85 md:text-base"
               style={{ fontFamily: "OPPOSans, sans-serif" }}
             >
-              智成时空专业致力于时空数据治理与智能化应用领域的技术研发与应用推广，目前已形成了以时空智能基础产品+时空数据智能中台+定制派生平台级产品为核心，全量源码自主创新、具备安全自主可控架构、全面适配信创环境的产品体系，为各行各业时空数据智能应用提供技术支撑。
-            </p>
+              <p>智成时空专业致力于时空数据治理与智能化应用领域的技术研发与应用推广，目前已形</p>
+              <p>成了以时空智能基础产品+时空数据智能中台+定制派生平台级产品为核心，全量源码自</p>
+              <p>主创新、具备安全自主可控架构、全面适配信创环境的产品体系，为各行各业时空数据</p>
+              <p>智能应用提供技术支撑。</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 产品体系区域 */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden backdrop-blur-[4px]">
         <div className="absolute inset-0">
           <img
             src="/images/e882aa5a0d24cb4514e2c77014cf8a8da8378ccd.png"
@@ -98,6 +101,12 @@ export default async function ProductsPage() {
                   featureTexts = JSON.parse(product.features);
               } catch {}
 
+              // 将子项分成每行3个的组
+              const rows: string[][] = [];
+              for (let i = 0; i < featureTexts.length; i += 3) {
+                rows.push(featureTexts.slice(i, i + 3));
+              }
+
               return (
                 <div key={product.id} className="flex flex-col gap-6">
                   {/* 标题区 */}
@@ -116,24 +125,36 @@ export default async function ProductsPage() {
                     </p>
                   </div>
 
-                  {/* 子项列表 - 三列布局 */}
-                  <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
-                    {featureTexts.map((text, fidx) => (
+                  {/* 子项列表 - 每行3个，flex布局 */}
+                  <div className="flex flex-col gap-[10px]">
+                    {rows.map((row, ridx) => (
                       <div
-                        key={fidx}
-                        className="flex items-center justify-between border-b border-[#0A357C] pb-1"
+                        key={ridx}
+                        className="flex flex-col gap-[10px] sm:flex-row sm:justify-between"
                       >
-                        <span
-                          className="text-sm text-[#0A357C] md:text-base"
-                          style={{ fontFamily: "OPPOSans, sans-serif" }}
-                        >
-                          {text}
-                        </span>
-                        <img
-                          src="/images/swapright.png"
-                          alt=""
-                          className="h-4 w-4 flex-shrink-0"
-                        />
+                        {row.map((text, cidx) => (
+                          <div
+                            key={cidx}
+                            className="flex flex-1 items-center justify-between border-b border-[#0A357C] pb-1"
+                          >
+                            <span
+                              className="text-sm text-[#0A357C] md:text-base"
+                              style={{ fontFamily: "OPPOSans, sans-serif" }}
+                            >
+                              {text}
+                            </span>
+                            <img
+                              src="/images/swapright.png"
+                              alt=""
+                              className="h-4 w-4 flex-shrink-0"
+                            />
+                          </div>
+                        ))}
+                        {/* 填充空位以保持对齐 */}
+                        {row.length < 3 &&
+                          Array.from({ length: 3 - row.length }).map((_, i) => (
+                            <div key={`empty-${i}`} className="flex-1" />
+                          ))}
                       </div>
                     ))}
                   </div>
