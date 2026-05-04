@@ -21,6 +21,7 @@ export async function PUT(request: Request, { params }: Params) {
         title: body.title,
         description: body.description,
         icon: body.icon,
+        image: body.image,
         sortOrder: body.sortOrder,
         isActive: body.isActive,
       },

@@ -22,6 +22,7 @@ export async function POST(request: Request) {
         title: body.title,
         description: body.description,
         icon: body.icon || null,
+        image: body.image || null,
         sortOrder: body.sortOrder || 0,
         isActive: body.isActive ?? true,
       },

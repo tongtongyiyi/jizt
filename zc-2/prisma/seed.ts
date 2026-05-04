@@ -10,6 +10,7 @@ async function main() {
     { key: 'contact_phone', value: '400-888-8888' },
     { key: 'contact_email', value: 'contact@zhicheng.com' },
     { key: 'contact_address', value: '北京市朝阳区xxx大厦' },
+    { key: 'team_hr_email', value: 'hr@scenemap.cn' },
     { key: 'hero_title', value: '让创新引领未来' },
     { key: 'hero_subtitle', value: '我们致力于为客户提供领先的技术解决方案，推动数字化转型，创造可持续价值。' },
   ]
@@ -48,21 +49,27 @@ async function main() {
     await prisma.product.create({ data: p })
   }
 
-  // Reset solutions to 12 items matching design
+  // Reset solutions to 3 design-matching items
   await prisma.solution.deleteMany({})
   const solutions = [
-    { title: '实景三维一张图', description: '', icon: '', sortOrder: 1 },
-    { title: '实景三维数据建库管理', description: '', icon: '', sortOrder: 2 },
-    { title: '一张图数据库群', description: '', icon: '', sortOrder: 3 },
-    { title: '一张图遥感影像统筹共享', description: '', icon: '', sortOrder: 4 },
-    { title: '自然资源三维立体时空数据库', description: '', icon: '', sortOrder: 5 },
-    { title: '数字孪生水利', description: '', icon: '', sortOrder: 6 },
-    { title: '数字交通', description: '', icon: '', sortOrder: 7 },
-    { title: '数字能源', description: '', icon: '', sortOrder: 8 },
-    { title: '市域社会治理', description: '', icon: '', sortOrder: 9 },
-    { title: '智慧农业', description: '', icon: '', sortOrder: 10 },
-    { title: '透明地质保障', description: '', icon: '', sortOrder: 11 },
-    { title: '......', description: '', icon: '', sortOrder: 12 },
+    {
+      title: '测绘地理信息领域',
+      description: '聚焦测绘地理信息领域项目生产汇交与全量资产管理体系，推动测绘地理信息数据管理由传统分散模式向一体化、云端化、服务化方向转型升级。',
+      image: '/images/70c1cc1d6967a866247f514cb99e84d930f07886.png',
+      sortOrder: 1,
+    },
+    {
+      title: '自然资源数字化治理',
+      description: '依托"一张图"与自然资源三维立体时空数据库，筑牢时空数据底座，推动自然资源管理数字化与高质量发展。',
+      image: '/images/4c992690dd8d5e387551a904302667ac0b9a3367.png',
+      sortOrder: 2,
+    },
+    {
+      title: '行业数字化转型',
+      description: '构建以时空数据为核心的行业数字化应用体系，全面推动各行业领域的智能化转型升级。',
+      image: '/images/32227567034b8d0c5e99b27520fb934d44bf8654.png',
+      sortOrder: 3,
+    },
   ]
   for (const s of solutions) {
     await prisma.solution.create({ data: s })
