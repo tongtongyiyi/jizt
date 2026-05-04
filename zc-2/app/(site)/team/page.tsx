@@ -107,7 +107,7 @@ export default async function TeamPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex min-h-[420px] items-center overflow-hidden bg-[#F3F8FB] md:min-h-[574px]">
+      <section className="relative flex min-h-[420px] items-center overflow-hidden bg-[#1D3A5F] md:min-h-[574px]">
         {/* 右侧背景装饰 */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-[55%] overflow-hidden md:w-[60%]">
           <img
@@ -231,7 +231,7 @@ export default async function TeamPage() {
             {teamCards.map((card, index) => (
               <div
                 key={index}
-                className="relative flex flex-1 flex-col items-start gap-8 bg-white px-6 pt-8 pb-8"
+                className="relative flex flex-1 flex-col items-start gap-8 border border-[#3E4757]/20 bg-white px-6 pt-8 pb-8"
               >
                 {/* 顶部蓝色边框 */}
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-[#1890FF]" />
@@ -260,7 +260,7 @@ export default async function TeamPage() {
       </section>
 
       {/* 我们的人才观 */}
-      <section className="bg-white">
+      <section className="border-b border-[#3E4757]/20 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-14 md:flex-row md:px-6 md:py-[72px]">
           <div className="relative w-full md:w-1/2">
             <img
@@ -299,7 +299,7 @@ export default async function TeamPage() {
       </section>
 
       {/* 我们期待这样的你 */}
-      <section className="bg-white">
+      <section className="border-b border-[#3E4757]/20 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col-reverse gap-12 px-4 py-14 md:flex-row md:px-6 md:py-[72px]">
           <div className="flex w-full flex-col gap-8 md:w-1/2">
             <h2
@@ -363,6 +363,25 @@ export default async function TeamPage() {
                 alt=""
                 className="mx-auto h-auto max-h-[500px] w-auto object-contain"
               />
+              {/* 金字塔文字叠加 */}
+              <p
+                className="absolute top-[12%] left-1/2 -translate-x-1/2 text-xl font-bold text-white md:text-2xl"
+                style={{ fontFamily: "OPPOSans, sans-serif" }}
+              >
+                股东
+              </p>
+              <p
+                className="absolute top-[38%] left-1/2 -translate-x-1/2 text-xl font-bold text-white md:text-2xl"
+                style={{ fontFamily: "OPPOSans, sans-serif" }}
+              >
+                骨干
+              </p>
+              <p
+                className="absolute top-[68%] left-1/2 -translate-x-1/2 text-xl font-bold text-white md:text-2xl"
+                style={{ fontFamily: "OPPOSans, sans-serif" }}
+              >
+                员工
+              </p>
             </div>
 
             {/* 右侧三层 */}
