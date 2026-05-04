@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import SolutionCarousel from "@/components/site/SolutionCarousel";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +12,7 @@ export default async function SolutionsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex min-h-[420px] items-center overflow-hidden bg-white md:min-h-[574px]">
+      <section className="relative flex min-h-[420px] items-center overflow-hidden bg-[#121212] md:min-h-[574px]">
         {/* 右侧背景装饰 */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-[55%] overflow-hidden md:w-[60%]">
           <img
@@ -98,42 +99,9 @@ export default async function SolutionsPage() {
             </p>
           </div>
 
-          {/* 卡片网格 */}
-          <div className="mt-8 flex flex-col gap-6 md:mt-12 md:flex-row">
-            {solutions.map((solution, index) => (
-              <div
-                key={solution.id}
-                className={`flex flex-1 flex-col gap-6 pb-6 ${
-                  index === 0
-                    ? "border-2 border-[#3D7BF2]"
-                    : "border border-[#3E4757]/20"
-                }`}
-              >
-                {solution.image && (
-                  <div className="h-[179px] w-full overflow-hidden">
-                    <img
-                      src={solution.image}
-                      alt={solution.title}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                )}
-                <div className="flex flex-col gap-[10px] px-4">
-                  <h3
-                    className="text-xl font-bold text-black md:text-[20px]"
-                    style={{ fontFamily: "OPPOSans, sans-serif" }}
-                  >
-                    {solution.title}
-                  </h3>
-                  <p
-                    className="text-base leading-[26px] text-black/75"
-                    style={{ fontFamily: "OPPOSans, sans-serif" }}
-                  >
-                    {solution.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* 轮播卡片 */}
+          <div className="mt-8 md:mt-12">
+            <SolutionCarousel solutions={solutions} />
           </div>
 
           {/* 按钮区 */}

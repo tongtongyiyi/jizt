@@ -22,15 +22,15 @@ export default function FloatingActions() {
          style={{ fontFamily: "OPPOSans, sans-serif" }}>
       {/* 售前 */}
       <button
-        className="relative flex flex-col items-center transition-transform hover:scale-110"
+        className="group relative flex h-11 w-11 items-center justify-center transition-transform hover:scale-110"
         title="售前咨询"
       >
         <img
           src="/images/c9ad51b9800c322e32de14972e65cef9d5f54cff.png"
           alt="售前"
-          className="h-16 w-[53px]"
+          className="h-11 w-11 rounded-full object-cover"
         />
-        <span className="absolute -bottom-1 flex h-5 w-10 items-center justify-center rounded-[20px] bg-white text-xs text-black shadow-sm"
+        <span className="absolute -bottom-1.5 flex h-4 items-center justify-center rounded-full bg-white px-1.5 text-[10px] text-black shadow-sm"
               style={{ fontFamily: "OPPOSans, sans-serif" }}>
           售前
         </span>
