@@ -108,89 +108,134 @@ export default async function PartnersPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex min-h-[420px] items-center overflow-hidden bg-[#F3F8FB] md:min-h-[574px]">
-        {/* Decorative background images */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <img
-            src="/images/91db9dc1848480695934781da27c1abea32d69f2.png"
-            alt=""
-            className="absolute left-[16%] top-[-23%] h-[145%] w-auto opacity-40"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
-          />
-          <img
-            src="/images/Rectangle4160.png"
-            alt=""
-            className="absolute right-[22%] top-[14%] h-[74%] w-auto object-contain"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
-          />
-          <img
-            src="/images/b450da341ddd0f5b93f10dccfb6797b72d1d7abf.png"
-            alt=""
-            className="absolute bottom-0 right-[16%] h-[90%] w-auto object-contain"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
-          />
-          <img
-            src="/images/4bece634e5d35d46975203a4e1bd7c222ff11385.png"
-            alt=""
-            className="absolute right-[8%] top-[9%] hidden h-36 w-36 rounded-full object-cover md:block"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
-          />
-          <img
-            src="/images/e7d5b655fe1db294f0b9c912bea09147f85c8144.png"
-            alt=""
-            className="absolute bottom-[8%] right-[38%] hidden h-40 w-32 rounded-br-3xl object-cover md:block"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
-          />
-          <img
-            src="/images/0c6e7ad2343447f72406dc0166321a377b407581.png"
-            alt=""
-            className="absolute left-[42%] top-[46%] hidden h-24 w-24 rounded-full object-cover md:block"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
-          />
+      <section className="relative flex h-[574px] items-center overflow-hidden bg-[#F3F8FB]">
+        {/* Decorative background images - 1920px reference container */}
+        <div className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden">
+          <div className="relative h-full w-[1920px] flex-shrink-0">
+            {/* Earth background */}
+            <img
+              src="/images/91db9dc1848480695934781da27c1abea32d69f2.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "1256px",
+                height: "1256px",
+                left: "303.5px",
+                top: "-130.7px",
+                opacity: 0.4,
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-303.5px 130.7px",
+                WebkitMaskPosition: "-303.5px 130.7px",
+              }}
+            />
+            {/* Rectangle4160 frame */}
+            <img
+              src="/images/Rectangle4160.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "425.8px",
+                height: "424px",
+                left: "1001.2px",
+                top: "79.3px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-1001.2px -79.3px",
+                WebkitMaskPosition: "-1001.2px -79.3px",
+              }}
+            />
+            {/* Main handshake image */}
+            <img
+              src="/images/b450da341ddd0f5b93f10dccfb6797b72d1d7abf.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "776px",
+                height: "517px",
+                left: "827.2px",
+                top: "33.8px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-827.2px -33.8px",
+                WebkitMaskPosition: "-827.2px -33.8px",
+              }}
+            />
+            {/* Circle image 1 - top right */}
+            <img
+              src="/images/4bece634e5d35d46975203a4e1bd7c222ff11385.png"
+              alt=""
+              className="absolute rounded-full object-cover"
+              style={{
+                width: "179.4px",
+                height: "185px",
+                left: "1341.5px",
+                top: "50.9px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-1341.5px -50.9px",
+                WebkitMaskPosition: "-1341.5px -50.9px",
+              }}
+            />
+            {/* Circle image 2 - bottom middle */}
+            <img
+              src="/images/e7d5b655fe1db294f0b9c912bea09147f85c8144.png"
+              alt=""
+              className="absolute rounded-full object-cover"
+              style={{
+                width: "155.8px",
+                height: "156.8px",
+                left: "903.1px",
+                top: "348.9px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-903.1px -348.9px",
+                WebkitMaskPosition: "-903.1px -348.9px",
+              }}
+            />
+            {/* Circle image 3 - middle left */}
+            <img
+              src="/images/0c6e7ad2343447f72406dc0166321a377b407581.png"
+              alt=""
+              className="absolute rounded-full object-cover"
+              style={{
+                width: "82px",
+                height: "88px",
+                left: "819.7px",
+                top: "262.5px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-819.7px -262.5px",
+                WebkitMaskPosition: "-819.7px -262.5px",
+              }}
+            />
+          </div>
         </div>
 
         {/* Left text */}
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start justify-center px-4 md:px-6">
-          <div className="flex flex-col gap-1 py-20 md:py-0">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-center px-4 md:px-6">
+          <div className="flex flex-col gap-1" style={{ paddingLeft: "240px", paddingTop: "226px" }}>
             <h1
-              className="text-3xl font-bold text-[#0A0A0A] md:text-[40px]"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
+              className="text-[40px] font-normal text-[#0A0A0A]"
+              style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
             >
               市场合作
             </h1>
             <p
-              className="text-base uppercase text-[#0A0A0A]/50 md:text-lg"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
+              className="text-lg font-normal uppercase text-[#0A0A0A]/50"
+              style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
             >
               Market Cooperation
             </p>
