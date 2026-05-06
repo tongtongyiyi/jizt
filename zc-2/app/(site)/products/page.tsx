@@ -90,36 +90,35 @@ export default async function ProductsPage() {
       </section>
 
       {/* 产品体系区域 */}
-      <section className="relative h-[1012px] overflow-hidden backdrop-blur-[4px]">
-        {/* Background image - 1920px reference container */}
-        <div className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden">
-          <div className="relative h-full w-[1920px] flex-shrink-0">
-            <img
-              src="/images/e882aa5a0d24cb4514e2c77014cf8a8da8378ccd.png"
-              alt=""
-              className="absolute opacity-40"
-              style={{
-                width: "3643px",
-                height: "1046px",
-                left: "-1173px",
-                top: "-21px",
-              }}
-            />
-          </div>
-        </div>
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col px-4 py-14 md:px-6">
-          <h2
-            className="text-[32px] font-normal text-[#222]"
-            style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
-          >
-            产品体系
-          </h2>
-          <div className="relative mt-8 flex flex-1 items-center justify-center">
-            <img
-              src="/images/b674c63de0684b9abf2b0a63cd8951aad9ed9afe.png"
-              alt=""
-              className="h-auto w-full max-w-[1440px]"
-            />
+      <section className="relative flex justify-center overflow-hidden">
+        <div className="relative h-[1012px] w-[1920px] flex-shrink-0 overflow-hidden backdrop-blur-[4px]">
+          {/* Background image */}
+          <img
+            src="/images/e882aa5a0d24cb4514e2c77014cf8a8da8378ccd.png"
+            alt=""
+            className="absolute opacity-40"
+            style={{
+              width: "3643px",
+              height: "1046px",
+              left: "-1173px",
+              top: "-21px",
+            }}
+          />
+          {/* Content */}
+          <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-col px-4 py-14 md:px-6">
+            <h2
+              className="text-[32px] font-normal text-[#222]"
+              style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+            >
+              产品体系
+            </h2>
+            <div className="relative mt-8 flex flex-1 items-center justify-center">
+              <img
+                src="/images/b674c63de0684b9abf2b0a63cd8951aad9ed9afe.png"
+                alt=""
+                className="h-auto w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
