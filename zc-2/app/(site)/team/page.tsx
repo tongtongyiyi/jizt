@@ -107,110 +107,161 @@ export default async function TeamPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex min-h-[420px] items-center overflow-hidden bg-[#1D3A5F] md:min-h-[574px]">
-        {/* 右侧背景装饰 */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-[55%] overflow-hidden md:w-[60%]">
-          <img
-            src="/images/6d9d7edcc4bda1f7bcce6c25d5b65239d107f27a.png"
-            alt=""
-            className="absolute right-0 top-0 h-full w-auto max-w-none object-cover"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
-          <img
-            src="/images/Rectangle4160.png"
-            alt=""
-            className="absolute right-[10%] top-[15%] h-[70%] w-auto object-contain opacity-80"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
-          <img
-            src="/images/b450da341ddd0f5b93f10dccfb6797b72d1d7abf.png"
-            alt=""
-            className="absolute bottom-0 right-[5%] h-[85%] w-auto object-contain"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
-          <img
-            src="/images/779eff89fb98d6254b9eaa07f1db7e017e79cf24.png"
-            alt=""
-            className="absolute right-[8%] top-[10%] hidden h-28 w-28 rounded-full object-cover md:block"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
-          <img
-            src="/images/8b7bc2d1d2e9f374970149a3b633146394ec700e.png"
-            alt=""
-            className="absolute bottom-[15%] left-[10%] hidden h-36 w-28 rounded-br-3xl object-cover md:block"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
-          <img
-            src="/images/97ce4aab75cb544a51577530cc3dee78811b2237.png"
-            alt=""
-            className="absolute left-[25%] top-[35%] hidden h-24 w-24 rounded-full object-cover md:block"
-            style={{
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
+      <section className="relative flex h-[574px] items-center overflow-hidden bg-[#F3F8FB]">
+        {/* Decorative background images - 1920px reference container */}
+        <div className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden">
+          <div className="relative h-full w-[1920px] flex-shrink-0">
+            {/* World map background */}
+            <img
+              src="/images/6d9d7edcc4bda1f7bcce6c25d5b65239d107f27a.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "2560px",
+                height: "864px",
+                left: "-442px",
+                top: "-196px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "442px 196px",
+                WebkitMaskPosition: "442px 196px",
+              }}
+            />
+            {/* White decorative frame */}
+            <img
+              src="/images/Rectangle4160.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "425.77px",
+                height: "424.03px",
+                left: "1001.21px",
+                top: "79.3px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-1001.21px -79.3px",
+                WebkitMaskPosition: "-1001.21px -79.3px",
+              }}
+            />
+            {/* Main photo - hands with puzzle */}
+            <img
+              src="/images/b450da341ddd0f5b93f10dccfb6797b72d1d7abf.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "776.08px",
+                height: "517.39px",
+                left: "827.22px",
+                top: "33.78px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-827.22px -33.78px",
+                WebkitMaskPosition: "-827.22px -33.78px",
+              }}
+            />
+            {/* Circle image 1 - globe */}
+            <img
+              src="/images/779eff89fb98d6254b9eaa07f1db7e017e79cf24.png"
+              alt=""
+              className="absolute rounded-full"
+              style={{
+                width: "179.36px",
+                height: "185.05px",
+                left: "1341.53px",
+                top: "50.94px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-1341.53px -50.94px",
+                WebkitMaskPosition: "-1341.53px -50.94px",
+              }}
+            />
+            {/* Small image with rounded bottom-right + border */}
+            <div
+              className="absolute"
+              style={{
+                width: "155.78px",
+                height: "187.77px",
+                left: "892.72px",
+                top: "334.45px",
+                borderRadius: "0px 0px 64px 0px",
+                border: "1px solid rgba(81, 170, 214, 0.6)",
+              }}
+            />
+            <img
+              src="/images/8b7bc2d1d2e9f374970149a3b633146394ec700e.png"
+              alt=""
+              className="absolute"
+              style={{
+                width: "155.78px",
+                height: "187.77px",
+                left: "903.77px",
+                top: "322.4px",
+                borderRadius: "0px 0px 64px 0px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-903.77px -322.4px",
+                WebkitMaskPosition: "-903.77px -322.4px",
+              }}
+            />
+            {/* Circle image 2 - team */}
+            <img
+              src="/images/97ce4aab75cb544a51577530cc3dee78811b2237.png"
+              alt=""
+              className="absolute rounded-full"
+              style={{
+                width: "118px",
+                height: "118px",
+                left: "822.22px",
+                top: "205.92px",
+                maskImage: "url(/images/Rectangle4132.png)",
+                WebkitMaskImage: "url(/images/Rectangle4132.png)",
+                maskSize: "1920px 574px",
+                WebkitMaskSize: "1920px 574px",
+                maskPosition: "-822.22px -205.92px",
+                WebkitMaskPosition: "-822.22px -205.92px",
+              }}
+            />
+          </div>
         </div>
 
-        {/* 左侧文字 */}
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start px-4 md:px-6">
-          <div className="flex flex-col gap-1 py-20 md:py-0">
-            <h1
-              className="text-3xl font-bold text-white md:text-[40px]"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
-            >
-              人才团队
-            </h1>
-            <p
-              className="text-base uppercase text-white/50 md:text-lg"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
-            >
-              TALENT TEAM
-            </p>
-            <p
-              className="mt-6 max-w-[500px] text-sm uppercase leading-[22px] text-white/70"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
-            >
-              智成时空成立至今，秉持自驱创新聚力理念，已组建了具有深厚行业沉淀的精英人才团队，我们以积极开放的人才观欢迎更多志同道合的伙伴，共创时空智能领域事业
-            </p>
+        {/* Left text - positioned within the same 1920px reference frame */}
+        <div className="absolute inset-0 flex justify-center overflow-hidden">
+          <div className="relative h-full w-[1920px] flex-shrink-0">
+            <div className="absolute flex flex-col gap-1" style={{ left: "240px", top: "226px" }}>
+              <h1
+                className="text-[40px] font-bold text-white"
+                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+              >
+                人才团队
+              </h1>
+              <p
+                className="text-lg font-normal uppercase text-white/50"
+                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+              >
+                TALENT TEAM
+              </p>
+              <div
+                className="mt-6 text-sm leading-[22px] text-white/70"
+                style={{
+                  fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif',
+                  maxWidth: "500px",
+                }}
+              >
+                <p>智成时空成立至今，秉持自驱创新聚力理念，已组建了具有</p>
+                <p>深厚行业沉淀的精英人才团队，我们以积极开放的人才观欢</p>
+                <p>迎更多志同道合的伙伴，共创时空智能领域事业</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -231,13 +282,13 @@ export default async function TeamPage() {
             {teamCards.map((card, index) => (
               <div
                 key={index}
-                className="relative flex flex-1 flex-col items-start gap-8 border border-[#3E4757]/20 bg-white px-6 pt-8 pb-8"
+                className="relative flex flex-1 flex-col items-start gap-8 border border-black/20 bg-white px-6 pt-8 pb-8"
               >
                 {/* 顶部蓝色边框 */}
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-[#1890FF]" />
                 <div className="flex flex-col gap-8">
                   <img src={card.icon} alt="" className="h-12 w-12" />
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-4">
                     <h3
                       className="text-xl font-bold text-black md:text-[20px]"
                       style={{ fontFamily: "OPPOSans, sans-serif" }}
