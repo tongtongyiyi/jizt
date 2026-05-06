@@ -114,7 +114,7 @@ export default async function PartnersPage() {
           <img
             src="/images/91db9dc1848480695934781da27c1abea32d69f2.png"
             alt=""
-            className="absolute left-[15%] top-[-20%] h-[140%] w-auto opacity-40"
+            className="absolute left-[16%] top-[-23%] h-[145%] w-auto opacity-40"
             style={{
               maskImage: "url(/images/Rectangle4132.png)",
               WebkitMaskImage: "url(/images/Rectangle4132.png)",
@@ -125,7 +125,7 @@ export default async function PartnersPage() {
           <img
             src="/images/Rectangle4160.png"
             alt=""
-            className="absolute right-[10%] top-[15%] h-[70%] w-auto object-contain"
+            className="absolute right-[22%] top-[14%] h-[74%] w-auto object-contain"
             style={{
               maskImage: "url(/images/Rectangle4132.png)",
               WebkitMaskImage: "url(/images/Rectangle4132.png)",
@@ -136,7 +136,7 @@ export default async function PartnersPage() {
           <img
             src="/images/b450da341ddd0f5b93f10dccfb6797b72d1d7abf.png"
             alt=""
-            className="absolute bottom-0 right-[5%] h-[85%] w-auto object-contain"
+            className="absolute bottom-0 right-[16%] h-[90%] w-auto object-contain"
             style={{
               maskImage: "url(/images/Rectangle4132.png)",
               WebkitMaskImage: "url(/images/Rectangle4132.png)",
@@ -147,7 +147,7 @@ export default async function PartnersPage() {
           <img
             src="/images/4bece634e5d35d46975203a4e1bd7c222ff11385.png"
             alt=""
-            className="absolute right-[8%] top-[10%] hidden h-28 w-28 rounded-full object-cover md:block"
+            className="absolute right-[8%] top-[9%] hidden h-36 w-36 rounded-full object-cover md:block"
             style={{
               maskImage: "url(/images/Rectangle4132.png)",
               WebkitMaskImage: "url(/images/Rectangle4132.png)",
@@ -158,7 +158,7 @@ export default async function PartnersPage() {
           <img
             src="/images/e7d5b655fe1db294f0b9c912bea09147f85c8144.png"
             alt=""
-            className="absolute bottom-[15%] right-[25%] hidden h-36 w-28 rounded-br-3xl object-cover md:block"
+            className="absolute bottom-[8%] right-[38%] hidden h-40 w-32 rounded-br-3xl object-cover md:block"
             style={{
               maskImage: "url(/images/Rectangle4132.png)",
               WebkitMaskImage: "url(/images/Rectangle4132.png)",
@@ -169,7 +169,7 @@ export default async function PartnersPage() {
           <img
             src="/images/0c6e7ad2343447f72406dc0166321a377b407581.png"
             alt=""
-            className="absolute left-[45%] top-[45%] hidden h-20 w-20 rounded-full object-cover md:block"
+            className="absolute left-[42%] top-[46%] hidden h-24 w-24 rounded-full object-cover md:block"
             style={{
               maskImage: "url(/images/Rectangle4132.png)",
               WebkitMaskImage: "url(/images/Rectangle4132.png)",
@@ -180,7 +180,7 @@ export default async function PartnersPage() {
         </div>
 
         {/* Left text */}
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start px-4 md:px-6">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start justify-center px-4 md:px-6">
           <div className="flex flex-col gap-1 py-20 md:py-0">
             <h1
               className="text-3xl font-bold text-[#0A0A0A] md:text-[40px]"
@@ -240,7 +240,7 @@ export default async function PartnersPage() {
             <div className="flex flex-1 flex-col border border-[#3E4757]/20">
               <div className="flex items-center justify-center bg-[#042236] py-3">
                 <span
-                  className="text-lg font-medium text-white"
+                  className="text-xl font-medium text-white"
                   style={{ fontFamily: "OPPOSans, sans-serif" }}
                 >
                   实施理念
@@ -294,7 +294,7 @@ export default async function PartnersPage() {
             <div className="flex flex-1 flex-col border border-[#3E4757]/20">
               <div className="flex items-center justify-center bg-[#3D7BF2] py-3">
                 <span
-                  className="text-lg font-medium text-white"
+                  className="text-xl font-medium text-white"
                   style={{ fontFamily: "OPPOSans, sans-serif" }}
                 >
                   实施模式
@@ -363,7 +363,7 @@ export default async function PartnersPage() {
             {standardizationCards.map((card, index) => (
               <div
                 key={index}
-                className="relative flex flex-1 flex-col items-start gap-8 bg-white px-6 pt-8 pb-12"
+                className="relative flex flex-1 flex-col items-start gap-8 border border-[#3E4757]/20 bg-white px-6 pt-8 pb-12"
               >
                 <div className="absolute inset-x-0 top-0 h-1 bg-[#1890FF]" />
 
@@ -477,7 +477,7 @@ export default async function PartnersPage() {
               <img
                 src="/images/4674095123a4ae8df09a889922dd78a6be77a927.png"
                 alt="专利证书"
-                className="h-auto w-full max-w-md object-contain"
+                className="h-auto w-full max-w-xl object-contain"
               />
             </div>
           </div>
@@ -583,7 +583,7 @@ export default async function PartnersPage() {
 
             {/* 伙伴拥有 */}
             <div className="flex flex-1 flex-col">
-              <div className="flex items-center justify-center bg-[#3D7BF2] py-3">
+              <div className="flex items-center justify-center bg-[#042236] py-3">
                 <span
                   className="text-xl font-bold text-white"
                   style={{ fontFamily: "OPPOSans, sans-serif" }}
@@ -611,22 +611,6 @@ export default async function PartnersPage() {
             </div>
           </div>
 
-          {/* Contact CTA */}
-          <div className="mt-12 flex flex-col items-center gap-4">
-            <p
-              className="text-base text-[#0A0A0A]/75"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
-            >
-              商务合作邮箱：{contactEmail}
-            </p>
-            <a
-              href={`mailto:${contactEmail}`}
-              className="flex items-center gap-2 rounded-full bg-[#3D7BF2] px-6 py-2 text-sm text-white transition-opacity hover:opacity-90"
-              style={{ fontFamily: "OPPOSans, sans-serif" }}
-            >
-              <span>合作咨询</span>
-            </a>
-          </div>
         </div>
       </section>
     </div>
