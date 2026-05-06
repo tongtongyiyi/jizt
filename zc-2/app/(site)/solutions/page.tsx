@@ -1,13 +1,6 @@
-import { prisma } from "@/lib/prisma";
-
 export const dynamic = "force-dynamic";
 
 export default async function SolutionsPage() {
-  const configs = await prisma.config.findMany();
-  const configMap = Object.fromEntries(configs.map((c) => [c.key, c.value]));
-
-  const phone = configMap.contact_phone || "029-88228108";
-
   const solutions = [
     {
       title: "测绘地理信息领域",
@@ -39,7 +32,7 @@ export default async function SolutionsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex h-[574px] items-center overflow-hidden bg-white">
+      <section className="relative flex h-[574px] overflow-hidden bg-white">
         {/* Decorative background images - 1920px reference container */}
         <div className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden">
           <div className="relative h-full w-[1920px] flex-shrink-0">
@@ -59,6 +52,8 @@ export default async function SolutionsPage() {
                 WebkitMaskSize: "1920px 574px",
                 maskPosition: "395px 1px",
                 WebkitMaskPosition: "395px 1px",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
               }}
             />
             {/* Person/image overlay */}
@@ -77,6 +72,8 @@ export default async function SolutionsPage() {
                 WebkitMaskSize: "1920px 574px",
                 maskPosition: "-827px -34px",
                 WebkitMaskPosition: "-827px -34px",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
               }}
             />
             {/* Circle decoration with icons */}
@@ -98,24 +95,25 @@ export default async function SolutionsPage() {
                 style={{ left: "53px", top: "53px", width: "32px", height: "32px" }}
               />
             </div>
-          </div>
-        </div>
 
-        {/* Left text */}
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-center px-4 md:px-6">
-          <div className="flex flex-col gap-1" style={{ paddingLeft: "240px", paddingTop: "226px" }}>
-            <h1
-              className="text-[40px] font-normal text-white"
-              style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+            {/* Left text - positioned within the same 1920px reference frame */}
+            <div
+              className="absolute flex flex-col gap-1"
+              style={{ left: "240px", top: "226px" }}
             >
-              时空智能领域解决方案
-            </h1>
-            <p
-              className="text-lg font-normal uppercase text-white/50"
-              style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
-            >
-              Spatiotemporal intelligence solution
-            </p>
+              <h1
+                className="text-[40px] font-normal text-white"
+                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+              >
+                时空智能领域解决方案
+              </h1>
+              <p
+                className="text-lg font-normal uppercase text-white/50"
+                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+              >
+                Spatiotemporal intelligence solution
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -144,7 +142,11 @@ export default async function SolutionsPage() {
             {solutions.map((solution, idx) => (
               <div
                 key={idx}
-                className="relative flex flex-col items-start overflow-hidden border-2 border-[#3D7BF2]"
+                className={`relative flex flex-col items-start overflow-hidden ${
+                  idx === 0
+                    ? "border-2 border-[#3D7BF2]"
+                    : "border border-[#3E4757]/20"
+                }`}
               >
                 {/* Card image */}
                 <div className="relative w-full" style={{ height: "179px" }}>
