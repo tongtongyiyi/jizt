@@ -54,34 +54,36 @@ export default async function ProductsPage() {
           </div>
         </div>
 
-        {/* Left text */}
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-center px-4 md:px-6">
-          <div className="flex flex-col gap-12" style={{ paddingLeft: "240px", paddingTop: "211px" }}>
-            <div className="flex flex-col gap-1">
-              <h1
-                className="text-[40px] font-normal text-[#0A0A0A]"
-                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+        {/* Left text - positioned within the same 1920px reference frame */}
+        <div className="absolute inset-0 flex justify-center overflow-hidden">
+          <div className="relative h-full w-[1920px] flex-shrink-0">
+            <div className="absolute flex flex-col gap-12" style={{ left: "240px", top: "211px" }}>
+              <div className="flex flex-col gap-1">
+                <h1
+                  className="text-[40px] font-bold text-[#0A0A0A]"
+                  style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+                >
+                  产品中心
+                </h1>
+                <p
+                  className="text-lg font-normal uppercase text-[#0A0A0A]/50"
+                  style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+                >
+                  product center
+                </p>
+              </div>
+              <div
+                className="text-base leading-[160%] text-black/85"
+                style={{
+                  fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif',
+                  width: "880px",
+                }}
               >
-                产品中心
-              </h1>
-              <p
-                className="text-lg font-normal uppercase text-[#0A0A0A]/50"
-                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
-              >
-                product center
-              </p>
-            </div>
-            <div
-              className="text-base leading-[160%] text-black/85"
-              style={{
-                fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif',
-                width: "880px",
-              }}
-            >
-              <p>智成时空专业致力于时空数据治理与智能化应用领域的技术研发与应用推广，目前已形</p>
-              <p>成了以时空智能基础产品+时空数据智能中台+定制派生平台级产品为核心，全量源码自</p>
-              <p>主创新、具备安全自主可控架构、全面适配信创环境的产品体系，为各行各业时空数据</p>
-              <p>智能应用提供技术支撑。</p>
+                <p>智成时空专业致力于时空数据治理与智能化应用领域的技术研发与应用推广，目前已形</p>
+                <p>成了以时空智能基础产品+时空数据智能中台+定制派生平台级产品为核心，全量源码自</p>
+                <p>主创新、具备安全自主可控架构、全面适配信创环境的产品体系，为各行各业时空数据</p>
+                <p>智能应用提供技术支撑。</p>
+              </div>
             </div>
           </div>
         </div>
