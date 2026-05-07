@@ -16,6 +16,10 @@ export default async function AboutPage() {
       year: "2022.08",
       title: "成立",
       icon: "/images/Group341152.png",
+      line: "/images/Line112.png",
+      left: "244px",
+      top: "113px",
+      width: "240px",
       items: [
         "初始团队规模10余人",
         "成立之初就投资开启实景三维产品和时空数字孪生产品研发，形成产品雏形。",
@@ -25,6 +29,10 @@ export default async function AboutPage() {
       year: "2023",
       title: "全年产值近千万团队壮大至50人",
       icon: "/images/Group341151.png",
+      line: "/images/Line111.png",
+      left: "570px",
+      top: "217px",
+      width: "339px",
       items: [
         "自主研发实景三维数据管理系统通过全国专业测评，并名列前茅",
         "承研陕西省科技厅重点研发项目\"时空数字孪生基础产品\"",
@@ -36,6 +44,10 @@ export default async function AboutPage() {
       year: "2024",
       title: "产值2480万，团队扩大至80余人",
       icon: "/images/Group341150.png",
+      line: "/images/Line110.png",
+      left: "994px",
+      top: "140px",
+      width: "356px",
       items: [
         "自主研发三维实景桌面GIS、服务器GIS产品获得业内权威机构公开测评第一名",
         "参建项目获2024年度地理信息科技进步一等奖",
@@ -47,6 +59,10 @@ export default async function AboutPage() {
       year: "2025",
       title: "稳步发展",
       icon: "/images/Group34115.png",
+      line: "/images/Line11.png",
+      left: "1436px",
+      top: "53px",
+      width: "176px",
       items: [
         "聚焦空间智能领域，加速产品升级迭代",
         "稳步推进品牌建设，拓展市场份额",
@@ -56,41 +72,46 @@ export default async function AboutPage() {
 
   const cultureCards = [
     {
-      bg: "/images/204ffabd97be46622de4e3266daa74bfa1d905ae.png",
-      overlay: "rgba(0,0,0,0.5)",
-      border: true,
+      bg: "/images/4232e5b18bbd81d297d84ddc757c3f95dd3929d6.png",
+      overlay: "/images/204ffabd97be46622de4e3266daa74bfa1d905ae.png",
+      borderWidth: "6px",
+      borderColor: "rgba(255,255,255,0.7)",
       title: "时空智能技术创新用户价值",
-      bottom: "108px",
     },
     {
       bg: "/images/76a915846398ff851b3c280cb0682d83f9966f56.png",
-      overlay: "transparent",
+      overlay: null,
+      borderWidth: "1px",
+      borderColor: "rgba(255,255,255,0.3)",
       title: "\"一\"个使命",
-      bottom: "15.79px",
     },
     {
       bg: "/images/204ffabd97be46622de4e3266daa74bfa1d905ae.png",
-      overlay: "transparent",
+      overlay: "/images/7a9c5d4d7f93aae430a6e68f6384318ade6be2fb.png",
+      borderWidth: "1px",
+      borderColor: "rgba(255,255,255,0.3)",
       title: "\"一\"个套工作准则",
-      bottom: "15.79px",
     },
     {
       bg: "/images/204ffabd97be46622de4e3266daa74bfa1d905ae.png",
-      overlay: "transparent",
+      overlay: "/images/9d7ebee88a28cbcbf1904c3313f0e8987fb6c19d.png",
+      borderWidth: "1px",
+      borderColor: "rgba(255,255,255,0.3)",
       title: "\"三\"条价值观",
-      bottom: "15.79px",
     },
     {
       bg: "/images/e7f2fe0ea6e892c4bde0c084228b92be1aa663e7.png",
       overlay: "rgba(0,0,0,0.2)",
+      borderWidth: "1px",
+      borderColor: "rgba(255,255,255,0.3)",
       title: "\"三\"条人才观",
-      bottom: "15.79px",
     },
     {
       bg: "/images/204ffabd97be46622de4e3266daa74bfa1d905ae.png",
-      overlay: "transparent",
+      overlay: "/images/b275c28654ced14b9eea23a1713a29641d265b83.png",
+      borderWidth: "1px",
+      borderColor: "rgba(255,255,255,0.3)",
       title: "\"五\"个精神文化",
-      bottom: "15.79px",
     },
   ];
 
@@ -125,7 +146,7 @@ export default async function AboutPage() {
       lines: [email],
     },
     {
-      icon: "/images/Frame4.png",
+      icon: "/images/Frame3.png",
       title: "联系邮编",
       lines: ["710000"],
     },
@@ -177,24 +198,29 @@ export default async function AboutPage() {
           </div>
         </div>
 
-        {/* Left text */}
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-center px-4 md:px-6">
-          <div className="flex flex-col gap-1" style={{ paddingLeft: "240px", paddingTop: "226px" }}>
-            <h1
-              className="text-[40px] font-normal text-white"
-              style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+        {/* Left text - 1920px reference frame */}
+        <div className="absolute inset-0 flex justify-center overflow-hidden">
+          <div className="relative h-full w-[1920px] flex-shrink-0">
+            <div
+              className="absolute flex flex-col gap-1"
+              style={{ left: "240px", top: "226px" }}
             >
-              关于智成
-            </h1>
-            <p
-              className="text-lg font-normal uppercase text-white/70"
-              style={{
-                fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif',
-                letterSpacing: "0.33em",
-              }}
-            >
-              ABOUT SCENEMAP
-            </p>
+              <h1
+                className="text-[40px] font-normal text-white"
+                style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+              >
+                关于智成
+              </h1>
+              <p
+                className="text-lg font-normal uppercase text-white/70"
+                style={{
+                  fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif',
+                  letterSpacing: "0.33em",
+                }}
+              >
+                ABOUT SCENEMAP
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -268,20 +294,31 @@ export default async function AboutPage() {
             </p>
           </div>
 
-          {/* Timeline */}
-          <div className="relative mt-12 w-full">
-            {/* Timeline line */}
-            <img
-              src="/images/Vector8.png"
-              alt=""
-              className="absolute left-0 top-0 w-full"
-              style={{ height: "239px" }}
-            />
-            {/* Timeline items */}
-            <div className="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4" style={{ paddingTop: "113px" }}>
+          {/* Timeline - 1920px reference container */}
+          <div className="relative mt-12 flex w-full justify-center overflow-hidden"
+          >
+            <div className="relative h-[617px] w-[1920px] flex-shrink-0"
+            >
+              {/* Timeline line */}
+              <img
+                src="/images/Vector8.png"
+                alt=""
+                className="absolute left-0 top-0 w-full"
+                style={{ height: "239px" }}
+              />
+              {/* Timeline items - absolutely positioned */}
               {timeline.map((item, idx) => (
-                <div key={idx} className="flex flex-col gap-8">
-                  <div className="flex items-center gap-3">
+                <div
+                  key={idx}
+                  className="absolute flex flex-col gap-4"
+                  style={{
+                    left: item.left,
+                    top: item.top,
+                    width: item.width,
+                  }}
+                >
+                  <div className="flex items-center gap-3"
+                  >
                     <span
                       className="text-[32px] font-bold text-[#0150B0]"
                       style={{ fontFamily: '"DIN-Bold", sans-serif' }}
@@ -295,12 +332,13 @@ export default async function AboutPage() {
                       {item.title}
                     </span>
                   </div>
-                  <img src="/images/Line110.png" alt="" className="w-6" />
-                  <div className="flex flex-col gap-6">
+                  <img src={item.line} alt="" className="w-6" />
+                  <div className="flex flex-col gap-3"
+                  >
                     {item.items.map((text, tidx) => (
                       <p
                         key={tidx}
-                        className="text-base text-black/75"
+                        className="text-base leading-[21px] text-black/75"
                         style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
                       >
                         {text}
@@ -344,16 +382,24 @@ export default async function AboutPage() {
                 style={{ width: "464px", height: "240px" }}
               >
                 <img src={card.bg} alt="" className="absolute inset-0 h-full w-full object-cover" />
-                {card.overlay !== "transparent" && (
-                  <div className="absolute inset-0" style={{ backgroundColor: card.overlay }} />
-                )}
-                {card.border && (
-                  <div className="absolute inset-0 border-[6px] border-white/70" />
+                {card.overlay && (
+                  <>
+                    {card.overlay.startsWith("/") ? (
+                      <img src={card.overlay} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                    ) : (
+                      <div className="absolute inset-0" style={{ backgroundColor: card.overlay }} />
+                    )}
+                  </>
                 )}
                 <div
-                  className="absolute left-1/2 flex -translate-x-1/2 flex-col items-center justify-center"
-                  style={{ bottom: card.bottom }}
-                >
+                  className="absolute inset-0"
+                  style={{
+                    borderWidth: card.borderWidth,
+                    borderColor: card.borderColor,
+                    borderStyle: "solid",
+                  }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
                   <p
                     className="whitespace-nowrap text-2xl font-normal text-white"
                     style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
@@ -482,13 +528,13 @@ export default async function AboutPage() {
             {contactCards.map((card, idx) => (
               <div
                 key={idx}
-                className="relative flex flex-col items-center gap-8 border border-white/20 p-8"
+                className="relative flex flex-col items-center gap-8 border border-white/20 px-4 py-8"
               >
                 <div className="flex flex-col items-center gap-4">
                   <img src={card.icon} alt="" className="h-12 w-12" />
-                  <div className="w-full border-b border-white/20 pb-4 text-center">
+                  <div className="w-full border-b border-white/20 pb-6 text-center">
                     <span
-                      className="text-base text-white"
+                      className="text-xl text-white"
                       style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
                     >
                       {card.title}
