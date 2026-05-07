@@ -32,20 +32,21 @@ export default async function SolutionsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex h-[574px] overflow-hidden bg-white">
-        {/* Decorative background images - 1920px reference container */}
+      <section className="relative flex h-[574px] overflow-hidden bg-[#0a1628]">
+        {/* Background layers - 1920px reference container */}
         <div className="pointer-events-none absolute inset-0 flex justify-center overflow-hidden">
           <div className="relative h-full w-[1920px] flex-shrink-0">
             {/* Earth background */}
-            <img
-              src="/images/472dc73c63f086a21fe24631b4a414e5da898f6c.png"
-              alt=""
+            <div
               className="absolute"
               style={{
                 width: "2560px",
                 height: "576px",
                 left: "-395px",
                 top: "-1px",
+                backgroundImage: "url(/images/472dc73c63f086a21fe24631b4a414e5da898f6c.png)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
                 maskImage: "url(/images/Rectangle4132.png)",
                 WebkitMaskImage: "url(/images/Rectangle4132.png)",
                 maskSize: "1920px 574px",
@@ -95,8 +96,12 @@ export default async function SolutionsPage() {
                 style={{ left: "53px", top: "53px", width: "32px", height: "32px" }}
               />
             </div>
+          </div>
+        </div>
 
-            {/* Left text - positioned within the same 1920px reference frame */}
+        {/* Left text - 1920px reference frame */}
+        <div className="absolute inset-0 flex justify-center overflow-hidden">
+          <div className="relative h-full w-[1920px] flex-shrink-0">
             <div
               className="absolute flex flex-col gap-1"
               style={{ left: "240px", top: "226px" }}
