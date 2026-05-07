@@ -107,28 +107,17 @@ export default async function TeamPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Banner */}
-      <section className="relative flex justify-center overflow-hidden">
-        <div className="relative h-[574px] w-[1920px] flex-shrink-0 overflow-hidden bg-[#F3F8FB]">
-          {/* World map background */}
+      <section className="relative flex h-[574px] justify-center overflow-hidden bg-[#F3F8FB]">
+        {/* World map background - full width */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
             src="/images/6d9d7edcc4bda1f7bcce6c25d5b65239d107f27a.png"
             alt=""
-            className="absolute"
-            style={{
-              width: "2560px",
-              height: "864px",
-              left: "-442px",
-              top: "-196px",
-              maskImage: "url(/images/Rectangle4132.png)",
-              WebkitMaskImage: "url(/images/Rectangle4132.png)",
-              maskSize: "1920px 574px",
-              WebkitMaskSize: "1920px 574px",
-              maskPosition: "442px 196px",
-              WebkitMaskPosition: "442px 196px",
-              maskRepeat: "no-repeat",
-              WebkitMaskRepeat: "no-repeat",
-            }}
+            className="h-full w-full object-cover"
           />
+        </div>
+
+        <div className="relative h-full w-[1920px] flex-shrink-0 overflow-hidden">
           {/* White decorative frame */}
           <img
             src="/images/Rectangle4160.png"
