@@ -93,15 +93,17 @@ export default async function ProductsPage() {
       <section className="relative flex justify-center overflow-hidden">
         <div className="relative h-[1012px] w-[1920px] flex-shrink-0 overflow-hidden backdrop-blur-[4px]">
           {/* Background image */}
-          <img
-            src="/images/e882aa5a0d24cb4514e2c77014cf8a8da8378ccd.png"
-            alt=""
+          <div
             className="absolute opacity-40"
             style={{
               width: "3643px",
               height: "1046px",
               left: "-1173px",
               top: "-21px",
+              backgroundImage: "url(/images/e882aa5a0d24cb4514e2c77014cf8a8da8378ccd.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           />
           {/* Content */}
