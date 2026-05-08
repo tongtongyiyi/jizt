@@ -175,6 +175,8 @@ export default async function AboutPage() {
                 WebkitMaskSize: "1920px 574px",
                 maskPosition: "10px 20px",
                 WebkitMaskPosition: "10px 20px",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
               }}
             />
             {/* Person image */}
@@ -193,6 +195,8 @@ export default async function AboutPage() {
                 WebkitMaskSize: "1920px 574px",
                 maskPosition: "-827px -34px",
                 WebkitMaskPosition: "-827px -34px",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
               }}
             />
           </div>
@@ -229,7 +233,7 @@ export default async function AboutPage() {
       <section className="relative overflow-hidden bg-[#121212] backdrop-blur-[4px]">
         <div
           className="relative mx-auto flex max-w-7xl items-center px-4 md:px-6"
-          style={{ padding: "64px 240px" }}
+          style={{ padding: "64px 240px", gap: "56px" }}
         >
           <div className="flex flex-col gap-4" style={{ maxWidth: "734px" }}>
             <h2
@@ -267,6 +271,8 @@ export default async function AboutPage() {
                 WebkitMaskSize: "701px 516px",
                 maskPosition: "133px 204px",
                 WebkitMaskPosition: "133px 204px",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
               }}
             />
           </div>
@@ -287,7 +293,7 @@ export default async function AboutPage() {
               发展历程
             </h2>
             <p
-              className="text-base text-[#0A0A0A]"
+              className="text-center text-base text-[#0A0A0A]"
               style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
             >
               从初心启航到稳步深耕，于时光中积淀实力，在前行中不断超越自我
@@ -366,7 +372,7 @@ export default async function AboutPage() {
               企业文化
             </h2>
             <p
-              className="text-base text-[#0A0A0A]"
+              className="text-center text-base text-[#0A0A0A]"
               style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
             >
               智成时空"135"企业文化核心体系
@@ -399,10 +405,19 @@ export default async function AboutPage() {
                     borderStyle: "solid",
                   }}
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div
+                  className="absolute left-1/2 flex items-center justify-center"
+                  style={{
+                    bottom: idx === 0 ? "108px" : "15.79px",
+                    transform: "translateX(-50%)",
+                  }}
+                >
                   <p
-                    className="whitespace-nowrap text-2xl font-normal text-white"
-                    style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+                    className="whitespace-nowrap font-normal text-white"
+                    style={{
+                      fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif',
+                      fontSize: idx === 0 ? "18px" : "24px",
+                    }}
                   >
                     {card.title}
                   </p>
@@ -463,7 +478,7 @@ export default async function AboutPage() {
             </div>
             <div className="pb-4">
               <span
-                className="text-lg text-black/50"
+                className="text-lg text-black/75"
                 style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
               >
                 头部用户认可
@@ -475,13 +490,13 @@ export default async function AboutPage() {
           <div className="mt-12 flex w-full flex-col gap-8 lg:flex-row">
             {/* Left - qualification list */}
             <div className="flex w-full flex-col gap-4 lg:w-[344px]">
-              <div className="flex flex-col gap-5 border border-black/20 p-6">
+              <div className="flex flex-col gap-5 border border-black/20 px-6 py-8">
                 {qualifications.map((q, idx) => (
                   <div key={idx} className="flex items-center gap-4">
                     <img src={q.icon} alt="" className="h-[9px] w-[9px]" />
                     <span
                       className="text-base text-black/75"
-                      style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+                      style={{ fontFamily: '"OPPOSans-Medium", "OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif', lineHeight: '160%' }}
                     >
                       {q.text}
                     </span>
@@ -495,7 +510,8 @@ export default async function AboutPage() {
               <img
                 src="/images/b5f0f824d744a719e312da5c802d7b434868be9e.png"
                 alt="荣誉资质证书"
-                className="h-auto w-full max-w-[800px]"
+                className="w-full max-w-[800px] object-cover"
+                style={{ height: '521.55px' }}
               />
             </div>
           </div>
@@ -516,7 +532,7 @@ export default async function AboutPage() {
               联系我们
             </h2>
             <p
-              className="text-base text-white/75"
+              className="text-center text-base text-white/75"
               style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
             >
               简历投递方式：&lt;hr@scenemap.cn&gt;
@@ -529,6 +545,7 @@ export default async function AboutPage() {
               <div
                 key={idx}
                 className="relative flex flex-col items-center gap-8 border border-white/20 px-4 py-8"
+                style={{ height: '282px' }}
               >
                 <div className="flex flex-col items-center gap-4">
                   <img src={card.icon} alt="" className="h-12 w-12" />
@@ -541,12 +558,12 @@ export default async function AboutPage() {
                     </span>
                   </div>
                 </div>
-                <div className="flex flex-col gap-2 text-center">
+                <div className="flex flex-col gap-2 text-center" style={{ width: '310px' }}>
                   {card.lines.map((line, lidx) => (
                     <p
                       key={lidx}
                       className="text-base text-white/75"
-                      style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif' }}
+                      style={{ fontFamily: '"OPPOSans", "PingFang SC", "Microsoft YaHei", sans-serif', lineHeight: '150%' }}
                     >
                       {line}
                     </p>
